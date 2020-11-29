@@ -10,6 +10,9 @@ namespace Hw2M2
     {
         static void Main(string[] args)
         {
+            var candy = new StuffedChocolateCandy(5.5, 50, "Nut");
+            candy.GetChocolateType(50);
+            Console.ReadKey();
         }
     }
 }
