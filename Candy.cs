@@ -14,6 +14,11 @@ namespace Hw2M2
             get { return weightOfCandy; }
             set { if (weightOfCandy > 0) weightOfCandy = value; }
         }
-        public Candy(double weightOfCandy) { WeightOfCandy = weightOfCandy; }
+        private string Name { get; }
+        public Candy(double weightOfCandy, string name) 
+        { 
+            WeightOfCandy = weightOfCandy;
+            Name = name;
+        }
     }
 }

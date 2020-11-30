@@ -8,10 +8,11 @@ namespace Hw2M2
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
-            var candy = new StuffedChocolateCandy(5.5, 50, "Nut");
-            candy.GetChocolateType(50);
+            var rnd = new Random();
+            var candyPack = new Candy[5];
+            candyPack[0] = new CaramelCandy(rnd.Next(1, 6), "Карамельная палочка", "Citrus");
             Console.ReadKey();
         }
     }

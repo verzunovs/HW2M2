@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hw2M2
 {
-    class ChocolateCandy : Candy, IGetChocolateType
+    class ChocolateCandy : Candy
     {
         private double percentageOfCacao;
         public double PercentageOfCacao
@@ -15,17 +15,17 @@ namespace Hw2M2
             set { if (value >= 0 && value < 100) percentageOfCacao = value; }
         }
 
-        public ChocolateCandy(double weightOfCandy, double percentageOfCacao) : base(weightOfCandy)
+        public ChocolateCandy(double weightOfCandy,string name, double percentageOfCacao) 
+            : base(weightOfCandy, name)
         {
             PercentageOfCacao = percentageOfCacao;
         }
-        public void GetChocolateType(double percentageOfCacao)
+        public void GetChocolateType()
         {
-
-            if (percentageOfCacao >= 35 & percentageOfCacao < 100) Console.WriteLine($"It is {TypeOfChocolate.Dark} chocolate.");
-            if (percentageOfCacao < 35 & percentageOfCacao >= 25) Console.WriteLine($"It is {TypeOfChocolate.Milk} chocolate.");
-            if (percentageOfCacao < 25) Console.WriteLine($"It is {TypeOfChocolate.CocoaContainingProduct}.");
-            if (percentageOfCacao == 0) Console.WriteLine($"It is {TypeOfChocolate.White} chocolate;");
+            if (PercentageOfCacao >= 35 & PercentageOfCacao < 100) Console.WriteLine($"It is {TypeOfChocolate.Dark} chocolate.");
+            if (PercentageOfCacao < 35 & PercentageOfCacao >= 25) Console.WriteLine($"It is {TypeOfChocolate.Milk} chocolate.");
+            if (PercentageOfCacao < 25) Console.WriteLine($"It is {TypeOfChocolate.CocoaContainingProduct}.");
+            if (PercentageOfCacao == 0) Console.WriteLine($"It is {TypeOfChocolate.White} chocolate;");
         }
     }
 }

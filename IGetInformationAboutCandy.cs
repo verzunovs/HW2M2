@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Hw2M2
 {
-    interface IGetChocolateType
+    interface IGetInformationAboutCandy
     {
-        void GetChocolateType(double percentageOfCacao);
+        void GetGetInformationAboutCandy();
     }
 }

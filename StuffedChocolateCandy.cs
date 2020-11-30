@@ -8,14 +8,16 @@ namespace Hw2M2
 {
     class StuffedChocolateCandy : ChocolateCandy
     {
-        private string stuffing;
-        public string Stuffing
+        //private string stuffing;
+        public string Stuffing {get;}
+        public StuffedChocolateCandy(double weightOfCandy, string name, double percentageOfCocoa , string stuffing) 
+            : base(weightOfCandy,name,percentageOfCocoa) 
         {
-            get { return stuffing; }
-            set { if (value.Length != 0) stuffing = value; }
-        }
-        public StuffedChocolateCandy(double weightOfCandy,double percentageOfCocoa , string stuffing) : base(weightOfCandy, percentageOfCocoa) {
             Stuffing = stuffing;
+        }
+        public void GetStuffing()
+        {
+            Console.WriteLine($"It is {Stuffing}");
         }
     }
 }
