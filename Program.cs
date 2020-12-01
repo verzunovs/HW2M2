@@ -10,9 +10,9 @@ namespace Hw2M2
     {
         static void Main(string[] args) 
         {
-            var rnd = new Random();
             var candyPack = new Candy[5];
-            candyPack[0] = new CaramelCandy(rnd.Next(1, 6), "Карамельная палочка", "Citrus");
+            var menu = new CandyPackContoler();
+            menu.CreateCandyPack(candyPack);
             Console.ReadKey();
         }
     }

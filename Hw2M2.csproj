@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candy.cs" />
+    <Compile Include="CandyPackContoler.cs" />
     <Compile Include="ChocolateCandy.cs" />
     <Compile Include="CaramelCandy.cs" />
     <Compile Include="IGetInformationAboutCandy.cs" />
@@ -55,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MenuText.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
